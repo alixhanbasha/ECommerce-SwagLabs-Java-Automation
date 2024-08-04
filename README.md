@@ -36,4 +36,16 @@ I chose Notion for test management because of its free plan and web-hosting. Ide
 
 ---
 
+## Installation
 
+Make sure you have **Java 21**, **Maven 3.8.^**, **Chromium or Google Chrome** installed.
+
+```sh 
+git clone https://github.com/alixhanbasha/ECommerce-SwagLabs-Java-Automation.git
+cd ECommerce-SwagLabs-Java-Automation
+mvn clean install # to install the dependencies
+mvn verify -Dcucumber.tags="not @wip" # to run all the test cases not marked as @wip
+```
+
+If you want to check out the reports, click [this link](https://github.com/alixhanbasha/ECommerce-SwagLabs-Java-Automation/actions/workflows/maven.yml), select the latest run, 
+and you should find the 'Serenity Report' artifact.
