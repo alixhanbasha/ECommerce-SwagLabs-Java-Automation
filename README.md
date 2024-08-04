@@ -28,10 +28,10 @@ Website under test: https://www.saucedemo.com/
 
 ![Checkout the documentation related to the features](src/test/resources/features/readme.md)
 
-![Test Strategy](https://sugar-raclette-919.notion.site/Test-Strategy-for-Swag-Labs-897d5bccecac49739de0e26574e22690?pvs=4)
+[Test Strategy](https://sugar-raclette-919.notion.site/Test-Strategy-for-Swag-Labs-897d5bccecac49739de0e26574e22690?pvs=4)
 
 
-You can view the ![QA Tickets (Read Only)](https://sugar-raclette-919.notion.site/ed8d249635b842e3bb8f6d0f54d81603?v=cdddfd633e9443a8a60e568df83c8bb3) made with Notion.
+You can view the [QA Tickets (Read Only)](https://sugar-raclette-919.notion.site/ed8d249635b842e3bb8f6d0f54d81603?v=cdddfd633e9443a8a60e568df83c8bb3) made with Notion.
 I chose Notion for test management because of its free plan and web-hosting. Ideally I would choose Jira/Xray but that's not free.
 
 ---
