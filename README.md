@@ -5,5 +5,5 @@
 An example automation project that demonstrates the power and flexibility of Java + SerenityBDD with the Screen Play Pattern.
 
 Website under test: https://www.saucedemo.com/
-[Features](src/test/resources/features/readme.md)
-[Test Strategy & Plan](src/test/resources/docs)
+![Features](src/test/resources/features/readme.md)
+![Test Strategy & Plan](src/test/resources/docs)
