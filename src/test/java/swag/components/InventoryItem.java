@@ -3,7 +3,6 @@ package swag.components;
 import lombok.Data;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.targets.Target;
 import net.serenitybdd.screenplay.waits.Wait;
@@ -40,7 +39,7 @@ public class InventoryItem extends SwagComponent {
 
     @Override
     public Performable ensureIsPresentAndDisplayed() {
-        if( this.itemDetails == null )
+        if (this.itemDetails == null)
             throw new TestExecutionFailedException("You need to specify the item details. The details are required in order to assert values");
 
         return Task.where(

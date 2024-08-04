@@ -1,5 +1,6 @@
 package swag.stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -21,6 +22,13 @@ public class LoginStepDefinitions {
 		actor.wasAbleTo(
 			NavigateTo.theLoginPage(),
 			login.ensureIsDisplayedProperly()
+		);
+	}
+
+	@And("{actor} should be redirected to the login screen")
+	public void actorShouldBeRedirectedToTheLoginScreen(Actor actor){
+		actor.wasAbleTo(
+				login.ensureIsDisplayedProperly()
 		);
 	}
 
@@ -51,6 +59,13 @@ public class LoginStepDefinitions {
 	public void actorCanSeeAnErrorMessage( Actor actor ) {
 		actor.wasAbleTo(
 			login.seeThatErrorMessageForIncorrectLoginIsDisplayed()
+		);
+	}
+
+	@Then("{actor} can see the error message {string}")
+	public void actorCanSeeTheErrorMessage( Actor actor, String errorMessage ) {
+		actor.wasAbleTo(
+				login.seeThatErrorIsDisplayed(errorMessage)
 		);
 	}
 

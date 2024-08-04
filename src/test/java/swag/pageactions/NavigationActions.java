@@ -16,9 +16,10 @@ public class NavigationActions extends UIInteractions {
 	private NavigationMenu navigationMenu = new NavigationMenu();
 
 	private Performable goToPageFromNavigation( String page ) {
-		return SilentTask.where(
-			Click.on( navigationMenu.getOpenMenu() ),
+		if( !navigationMenu.getMenuContainer().isVisibleFor(OnStage.theActorInTheSpotlight()) )
+			Click.on( navigationMenu.getOpenMenu() ).performAs(OnStage.theActorInTheSpotlight());
 
+		return SilentTask.where(
 			Wait.until( () -> navigationMenu.getMenuContainer()
 				.isVisibleFor( OnStage.theActorInTheSpotlight() ) ),
 
@@ -42,7 +43,7 @@ public class NavigationActions extends UIInteractions {
 		return Task.where( "Redirecting to the About", this.goToPageFromNavigation( "About" ) );
 	}
 
-	@Step("Open About")
+	@Step("Reset app state")
 	public Performable clickResetAppState() {
 		return Task.where( "Resenting app state", this.goToPageFromNavigation( "Reset App State" ) );
 	}
