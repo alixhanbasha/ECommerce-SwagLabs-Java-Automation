@@ -16,6 +16,6 @@ import org.junit.runner.RunWith;
 	},
 	glue = "classpath:swag.stepdefinitions",
 	features = "src/test/resources/features",
-	tags = "@ProductPage:3"
+	tags = "not @wip"
 )
 public class CucumberTestSuite {}

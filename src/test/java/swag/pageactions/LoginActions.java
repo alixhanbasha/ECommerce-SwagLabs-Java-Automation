@@ -1,6 +1,7 @@
 package swag.pageactions;
 
 import net.serenitybdd.annotations.Step;
+import net.serenitybdd.core.Serenity;
 import net.serenitybdd.core.steps.UIInteractions;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.SilentTask;
@@ -38,6 +39,7 @@ public class LoginActions extends UIInteractions {
 
 	@Step("User attempts to login with incorrect credentials")
 	public Performable enterIncorrectCredentials() {
+		Serenity.setSessionVariable("unauthorized").to(Boolean.TRUE);
 		return Task.where(
 			"{0} logs in with incorrect credentials",
 			Enter.theValue( "locked_out_user" ).into( login.getUsernameInputField() ),

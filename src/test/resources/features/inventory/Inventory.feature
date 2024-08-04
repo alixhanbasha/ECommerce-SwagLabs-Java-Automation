@@ -1,3 +1,4 @@
+# don't forget to read the readme.md for more info
 @Inventory
 Feature: Inventory page for Swag Labs
 
