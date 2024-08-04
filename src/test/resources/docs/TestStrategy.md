@@ -4,7 +4,8 @@
 
 ```text
 
-This document is written as if Swag Labs is an actual project that needs testing, meaning the test strategy is written as if for a real company, by a real team with it's own QA department.
+This document is written as if Swag Labs is an actual project that needs testing, 
+meaning the test strategy is written as if for a real company, by a real team with it's own QA department.
 
 ```
 
@@ -39,6 +40,8 @@ There are a multitude of tools out there, here is a list of hand-picked ones:
 - Test management tools
   - XRay
   - Zephyr
+  - Notion // NOTE: This is plenty good for a demo app like Swag Labs. 
+           // In a real life project, I would/do use Jira & XRay.
 - Test automation tools
   - SerenityBDD (wrapper library for Selenium and Java)
 - Performance testing tools
