@@ -3,6 +3,7 @@ package swag.stepdefinitions;
 import io.cucumber.java.After;
 import io.cucumber.java.BeforeAll;
 import lombok.extern.slf4j.Slf4j;
+import net.serenitybdd.core.Serenity;
 import net.serenitybdd.screenplay.actors.OnStage;
 import swag.config.ProjectConfigurator;
 import swag.models.SwagItem;
@@ -34,7 +35,14 @@ public class Hooks {
 
 	@After
 	public static void willRunAfterTheScenario(){
-		new NavigationActions().clickResetAppState().performAs(OnStage.theActorInTheSpotlight());
+		if(!Serenity.hasASessionVariableCalled("unauthorized")) {
+			new NavigationActions()
+					.clickResetAppState()
+					.performAs(OnStage.theActorInTheSpotlight());
+			new NavigationActions()
+					.goToLogOut()
+					.performAs(OnStage.theActorInTheSpotlight());
+		}
 	}
 
 }

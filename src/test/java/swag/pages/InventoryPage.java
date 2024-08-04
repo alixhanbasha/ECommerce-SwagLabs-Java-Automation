@@ -1,6 +1,7 @@
 package swag.pages;
 
 import lombok.Getter;
+import net.serenitybdd.annotations.DefaultUrl;
 import net.serenitybdd.core.pages.ListOfWebElementFacades;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
@@ -10,9 +11,10 @@ import net.serenitybdd.screenplay.waits.WaitUntil;
 import swag.components.Footer;
 import swag.components.Header;
 import swag.lib.SwagPage;
-import swag.performables.ListElements;
+import swag.performables.AllAvailableItems;
 
 @Getter
+@DefaultUrl("https://www.saucedemo.com/inventory.html")
 /**
  * @author bashaalixhan@gmail.com
  * */
@@ -32,7 +34,7 @@ public class InventoryPage extends SwagPage {
                 "Ensuring that the inventory page is present and displayed",
                 WaitUntil.angularRequestsHaveFinished(),
                 this.header.ensureIsPresentAndDisplayed(),
-                ListElements.ensure(products).areDisplayed(),
+                AllAvailableItems.ensure(products).areDisplayed(),
                 this.footer.ensureIsPresentAndDisplayed()
         );
     }

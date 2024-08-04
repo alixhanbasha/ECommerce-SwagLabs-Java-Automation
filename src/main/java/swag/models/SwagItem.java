@@ -16,6 +16,7 @@ public class SwagItem {
     private String title;
     private String description;
     private String price;
+    private String tax;
 
     public static SwagItem getItemFromDataStore(String key) throws IOException {
         JsonObject data = JsonParser.parseString(

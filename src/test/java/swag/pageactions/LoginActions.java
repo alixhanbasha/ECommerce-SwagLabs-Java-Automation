@@ -55,4 +55,13 @@ public class LoginActions extends UIInteractions {
 		);
 	}
 
+	@Step("User is presented with an error message")
+	public Performable seeThatErrorIsDisplayed(String message){
+		return Task.where(
+				"{0} can see the error message 'Epic sadface: " + message + "'",
+				Wait.until( () -> login.getErrorMessage().isVisibleFor( OnStage.theActorInTheSpotlight() ) ),
+				Ensure.that( login.getErrorMessage() ).hasTextContent( "Epic sadface: " + message  )
+		);
+	}
+
 }

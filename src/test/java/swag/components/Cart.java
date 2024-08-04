@@ -25,6 +25,17 @@ public class Cart extends SwagComponent {
     private Target shoppingCartLinkBadge = Target.the( "the shopping cart link badge" )
             .locatedBy( ".shopping_cart_link > span.shopping_cart_badge" );
 
+    public Performable shouldHaveItems(String numberOfItems){
+        if( Integer.parseInt(numberOfItems) <= 0 )
+            return Task.where("There should be no items in the cart");
+
+        return Task.where(
+                "There should be " + numberOfItems + " item/s in the shopping cart",
+                Ensure.that(this.shoppingCartLinkBadge).isDisplayed(),
+                Ensure.that(this.shoppingCartLinkBadge).hasText(numberOfItems)
+        );
+    }
+
     @Override
     public Performable ensureIsPresentAndDisplayed() {
         return Task.where(
