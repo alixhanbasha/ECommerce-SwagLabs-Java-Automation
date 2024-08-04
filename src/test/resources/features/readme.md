@@ -2,11 +2,11 @@
 
 ### This is a demo app, but for the sake of simplicity we will treat it as a real app
 
-* The _Login_ feature
+* The _[Login](/features/login/readme.md)_ feature
   * If the user has an account, and uses the correct credentials, the user can log in
   * If the user does not have an account, or uses the incorrect credentials, then he/she cannot log in
 
-* The _Inventory_ feature
+* The _[Inventory](/features/inventory/readme.md)_ feature
   * Once logged in, the user should see a list of products in the Inventory page
   * Each product should have an image, a title, description and price visible.
   * When "Add to cart" is clicked for a product, that product should be added to the users shopping cart
@@ -21,7 +21,7 @@
   * The footer should be visible at all times
     * Contains copyright info, and social links
  
-* The _Product Page_
+* The _[Product Page](/features/product/readme.md)_
   * Once the user is in the Inventory Page, they can select one of the products for a more detailed view
   * The product should have an image, a title, description and price visible.
     * Also, there should be a button for "Add to cart" visible and functional
@@ -32,7 +32,7 @@
   * The footer should be visible at all times
       * Contains copyright info, and social links
 
-* The _Shopping Cart_ feature
+* The _[Shopping Cart](/features/shopping_cart/readme.md)_ feature
   * Can be accessed from the header, by clicking the shopping cart icon
   * If the user has added a product to the cart, then it should be visible in the "Your Cart" page
   * The "Your Cart" page is accessible at all times, so if the user has not added anything to their cart, the page should have
