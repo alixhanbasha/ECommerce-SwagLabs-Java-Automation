@@ -18,6 +18,9 @@ jobs:
     - uses: actions/checkout@v2
 
     - uses: browser-actions/setup-chrome@latest
+      with:
+        chrome-version: 127
+        install-chromedriver: true
     - run: chrome --version
 
     - name: Set up JDK 21
