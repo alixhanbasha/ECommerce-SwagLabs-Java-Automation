@@ -4,25 +4,6 @@
 
 This is an example automation project that demonstrates the power and flexibility of Java + SerenityBDD with the Screen Play Pattern.
 
-On top of that, it's a project used to showcase skills and abilities I have gained throughout my career. 
-* QA Automation Engineer
-  * Writing high-level BDD scenarios
-  * Implementing robust and stable test cases
-  * UI/API automation
-  * Reports
-  * Performance testing
-    * Mostly API with Gatling
-    * Some UI with NeoLoad and JMeter
-* Manual QA
-  * UI
-  * API testing with Postman
-  * Writing/maintaining test cases, strategies, plans
-  * Writing reports & documentation
-* QA Lead
-  * Managing a team of 4 QAs (2 manual & 2 automation engineers)
-  * Writing Test strategies and test plans
-
-
 This project is a work in progress, and is updated on a regular basis.
 
 Website under test: https://www.saucedemo.com/
